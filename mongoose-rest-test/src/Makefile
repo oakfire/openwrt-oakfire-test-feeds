@@ -9,6 +9,8 @@ ifeq "$(SSL)" "OPENSSL"
 CFLAGS += -DMG_ENABLE_OPENSSL=1 -lssl -lcrypto
 endif
 
+EXTRA_CFLAGS += -std=c99
+
 all: $(PROG)
 	$(DEBUGGER) ./$(PROG) $(ARGS)
 
