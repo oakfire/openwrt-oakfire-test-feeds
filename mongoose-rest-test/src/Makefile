@@ -9,11 +9,9 @@ ifeq "$(SSL)" "OPENSSL"
 CFLAGS += -DMG_ENABLE_OPENSSL=1 -lssl -lcrypto
 endif
 
-EXTRA_CFLAGS += -std=c99
+EXTRA_CFLAGS += -std=gnu99
 
 all: $(PROG)
-	$(DEBUGGER) ./$(PROG) $(ARGS)
-
 
 $(PROG): main.c
 	$(CC) ./mg/mongoose.c -I./mg/ -W -Wall $(CFLAGS) $(EXTRA_CFLAGS) -o $(PROG) main.c
