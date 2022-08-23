@@ -10,7 +10,7 @@
 
 #include "mongoose.h"
 
-static const char *s_http_addr = "http://localhost:8071";  // HTTP port
+static const char *s_http_addr = "http://0.0.0.0:8071";  // HTTP port
 static const char *s_root_dir = "mg-test-web-root";
 
 static void fn(struct mg_connection *c, int ev, void *ev_data, void *fn_data) {
