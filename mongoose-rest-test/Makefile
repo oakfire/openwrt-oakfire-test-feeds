@@ -51,4 +51,4 @@ define Package/mongoose-rest-test/install
 	$(CP) ./mg-test-web-root/* $(1)/usr/bin/mg-test-web-root
 endef
 
-$(eval $(call BuildPackage,hellooak))
+$(eval $(call BuildPackage,mongoose-rest-test))
