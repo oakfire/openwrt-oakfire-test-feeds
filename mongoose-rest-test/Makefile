@@ -48,7 +48,7 @@ define Package/mongoose-rest-test/install
 	$(INSTALL_DIR) $(1)/usr/bin
 	$(INSTALL_DIR) $(1)/usr/bin/mg-test-web-root
 	$(INSTALL_BIN) $(PKG_BUILD_DIR)/mongoose-rest-test $(1)/usr/bin/
-	$(CP) ./mg-test-web-root/* $(1)/usr/bin/mg-test-web-root
+	$(CP) $(PKG_BUILD_DIR)/mg-test-web-root/* $(1)/usr/bin/mg-test-web-root
 endef
 
 $(eval $(call BuildPackage,mongoose-rest-test))
